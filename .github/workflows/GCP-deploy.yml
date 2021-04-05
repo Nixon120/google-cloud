@@ -30,7 +30,7 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Build Docker image
-          run: docker build . --tag hello-world:latest gcr.io/annular-arena-247212/hello-world
+          run: docker build . --tag hello-world:latest 
 
         - name: Test Docker image
           run: docker run hello-world sh -c "go test -v" 
