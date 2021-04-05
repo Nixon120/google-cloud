@@ -36,7 +36,7 @@ jobs:
           run: docker build . --tag hello-app:latest
         
         - name: Docker Tag
-          run: docker tag hello-app gcrio/My First Project/hello-app
+          run: docker tag hello-app gcr.io/My First Project/hello-app:tag
       
         - name: Test Docker image
           run: docker run hello-app sh -c "go test -v" 
