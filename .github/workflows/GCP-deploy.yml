@@ -1,3 +1,11 @@
+docker  tag hello-world gcr.io/annular-arena-247212/hello-world
+
+docker push gcr.io/My First Project/hello-world
+
+docker push hello-world
+
+
+
 #comment
 name: Docker
 
@@ -36,7 +44,7 @@ jobs:
           run: docker run hello-world sh -c "go test -v" 
 
         - name: Push Docker image
-          run: docker push hello-world
+          run: docker push gcr.io/My First Project/hello-world
 
         - name: Deploy Docker image
           run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image hello-world --region us-east1-b --platform managed --allow-unauthenticated
