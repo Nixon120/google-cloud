@@ -33,7 +33,7 @@ jobs:
           run: docker build . --tag hello-app:latest
         
         - name: Docker Tag
-          run: tag gcr.io/google-samples/hello-app:1.0 gcr.io/annular-arena-247212/quickstart-image:tag1
+          run: tag "gcr.io/google-samples/hello-app:1.0 gcr.io/annular-arena-247212/quickstart-image:tag1"
 
         - name: Test Docker image
           run: docker run hello-world sh -c "go test -v" 
